@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="comment"
+            type="com.example.simple_api_call.GetCommentsResponseClass"/>
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Id: "+comment.id.toString()}'
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Name: "+comment.name.toString()}'
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Email :"+comment.email.toString()}'
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"postId :"+comment.postId.toString()}'
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{"Body :"+comment.body.toString()}'
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+
+
